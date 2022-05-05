@@ -1,18 +1,156 @@
-<!DOCTYPE html>
-<html>
-  <body>
+<!DOCTYPE html> 
+    <html>
+        <Title>Login</Title>
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <style>
+                html {
+	            height: 100%;
+	            }
 
-    <h2>HTML Forms</h2>
+                input {
+                    caret-color: black;
+                }
 
-    <form action="/action_page.php">
-      <label for="fname">First name:</label><br>
-      <input type="text" id="fname" name="fname" value="John"><br>
-      <label for="lname">Last name:</label><br>
-      <input type="text" id="lname" name="lname" value="Doe"><br><br>
-      <input type="submit" value="Submit">
-    </form>
+                body {
+                margin: 0;
+                padding: 0;
+                font-family: sans-serif;
+                background-image: linear-gradient(-225deg, #ffffff 10%, #ffffff 55%, #ffffff 100%);
+                }
+                .login-box {
+                    position: absolute;
+	                top: 50%;
+	                left: 50%;
+	                width: 400px;
+	                padding: 40px;
+	                transform: translate(-50%, -50%);
+	                background: rgba(142, 142, 142, 0);
+	                box-sizing: border-box;
+	                box-shadow: 0 15px 25px grey;
+	                border-radius: 10px;
+                }
+                .user-box  {
+	                margin: 0 1 30px;
+	                padding: 0;
+	                color: greenyellow;
+	                text-align: center;
+	            }
+                .login-box .user-box {
+	                position: relative;
+	            }
+                .login-box .user-box input {
+	              width: 100%;
+	              padding: 10px 0;
+	              font-size: 16px;
+	              color: black;
+	              margin-bottom: 30px;
+	              border: none;
+	              border-bottom: 2px solid grey;
+	              outline: none;
+	              background: transparent;
+	            }
 
-    <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+	            .login-box .user-box label {
+	             position: absolute;
+	             top: 0;
+	             left: 0;
+	             padding: 10px 0;
+	             font-size: 16px;
+	             color: grey;
+	             pointer-events: none;
+	             transition: 1s;
+	            }
 
-  </body>
-</html>
+	            .login-box .user-box input:focus~label,
+	            .login-box .user-box input:valid~label {
+	              top: -20px;
+	             left: 0;
+	              color: grey;
+	             font-size: 12px;
+	            }
+
+	            .login-box form a {
+	             position: relative;
+	             display: inline-block;
+	             padding: 10px 20px;
+	             color: grey;
+	             font-size: 16px;
+	             text-decoration: none;
+	             text-transform: uppercase;
+	             overflow: hidden;
+	             transition: 100s;
+	             margin-top: 40px;
+	             letter-spacing: 4px;
+            	}
+
+	            .login-box a:hover {
+	             background: rgb(255, 0, 0);
+	             color: rgb(255, 255, 255);
+	             border-radius: 5px;
+	             box-shadow: 0 0 5px red,
+		            0 0 25px red,
+		            0 0 50px red,
+		            0 0 100px red;
+	            }
+                .not {
+                    font-style: normal;
+                    color: black;
+                }
+                .or {
+                    text-align: center;
+                }
+                .icons {
+                    text-align: center;
+                }
+                .button {
+                    color: grey;
+                    text-align: center;
+                }
+                .register {
+                    background-color: transparent;
+                    border-color: #ff2727;
+                    color: purple;
+                }
+				.google {
+					color: purple;
+				}
+				.login-box {
+					text-align: center;
+					background-color: whitesmoke;
+					background-blend-mode: color;
+				}
+              </style>
+        </head>
+        <body>
+    <div class="login-box">
+                <p style="color:grey">Login</p>
+            <div class="user-box">
+                <input type="text" name="Email" required="true">
+                <label>Email</label>
+            </div>
+        
+            <div class="user-box">
+                <input type="password" name="Password" required="true">
+                <label>Password</label>
+            </div>
+                <a href="file:///C:/Users/jjbjerke/Downloads/Websites/Code.html"style="text-decoration:none"  class="button">Sign In</a>
+
+            <p class="or">----- or continue with -----</p>
+	  <div class="icons">
+		<a href="https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin" target="_blank" class="google"><i class="fab fa-google"></i></a>
+		<a href="https://github.com/login" target="_blank"class="google"><i class="fab fa-github"></i></a>
+		<a href="https://www.facebook.com/" target="_blank" class="google"><i class="fab fa-facebook"></i></a>
+		<a href="https://www.instagram.com/accounts/login/?hl=en" target="_blank" class="google"><i class="fab fa-instagram"></i></a>
+		<a href="https://www.linkedin.com/login" target="_blank" class="google"><i class="fab fa-linkedin"></i></a>
+		<a href="https://accounts.google.com/signin/v2/identifier?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252Faccount%26feature%3Dredirect_login&hl=en&flowName=GlifWebSignIn&flowEntry=ServiceLogin" target="_blank" class="google"><i class="fab fa-youtube"></i></a>
+	  </div>
+	  <div class="not">Not a member? <a href="https://jacksonberes07.wixsite.com/gamersquads"  class="register" style="text-decoration: none">Register now</a></div>
+	</form>
+     </div>
+  </div>
+  <script src="https://kit.fontawesome.com/0ee5e98bbf.js" crossorigin="anonymous"></script>
+        </body>
+    </html>
